@@ -87,8 +87,6 @@ def ParseSignal(signal: str) -> dict:
     trade['Symbol'] = (signal[0].split())[-1].upper()
     
     # checks if the symbol is valid, if not, returns an empty dictionary
-    if(trade['Symbol'] not in SYMBOLS):
-        return {}
     
     # checks wheter or not to convert entry to float because of market exectution option ("NOW")
     if(trade['OrderType'] == 'Buy' or trade['OrderType'] == 'Sell'):
